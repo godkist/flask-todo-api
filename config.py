@@ -14,7 +14,6 @@ def as_bool(value):
 class Config:
     # database options
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = as_bool(os.environ.get('SQL_ECHO'))
 
     # security options
